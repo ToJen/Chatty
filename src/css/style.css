@@ -1,0 +1,317 @@
+/*
+  CS3715 FINAL PROJECT
+  MEMBERS: KELWIN JOANES, OLUWATOMISIN JENROLA, SAAHIL BUDHRANI
+  DATE SUBMITTED: 29/03/16
+  WEB APP NAME: CHATTY
+ */
+ 
+/* file: style.css */
+body{
+	font-size: 1em;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Arial, serif;
+	margin: 0;
+	padding: 0;
+    -webkit-transition: background-image 2s ease-in-out;
+  -moz-transition: background-image 2s ease-in-out;
+  -o-transition: background-image 2s ease-in-out;
+  -ms-transition: background-image 2s ease-in-out; 
+  transition: background-image 2s ease-in-out;
+}
+
+body#chatPage{
+  background-image: url("../img/bg-chat.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input[type=submit],[type=reset]{
+	font-size: 1em;
+	background: #148dc3;
+	border: none;
+	color: #fff;
+	-webkit-border-radius: 10;
+	-moz-border-radius: 10;
+	border-radius: 10px;
+	width: 80px;
+	height: 40px;
+}
+
+input[type=submit]:hover,[type=reset]:hover{
+	background: #26aae5;
+}
+
+input[type=radio]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=radio]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+input[type=radio]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+input[type=radio]:not(old):checked + label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(rgb(38,170,229),rgb(20,141,195));
+  background-image :     -ms-linear-gradient(rgb(38,170,229),rgb(20,141,195));
+  background-image :      -o-linear-gradient(rgb(38,170,229),rgb(20,141,195));
+  background-image : -webkit-linear-gradient(rgb(38,170,229),rgb(20,141,195));
+  background-image :         linear-gradient(rgb(38,170,229),rgb(20,141,195));
+}
+
+#tbl {
+  background: rgba(255,255,255,0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+td{
+	padding: 10px;
+}
+
+th{
+	background-image :    -moz-linear-gradient(rgb(20,141,195),rgb(38,170,229));
+	background-image :     -ms-linear-gradient(rgb(20,141,195),rgb(38,170,229));
+	background-image :      -o-linear-gradient(rgb(20,141,195),rgb(38,170,229));
+	background-image : -webkit-linear-gradient(rgb(20,141,195),rgb(38,170,229));
+	background-image :         linear-gradient(rgb(20,141,195),rgb(38,170,229));
+	font-size: 1.5em;
+	color: #fff;
+	height: 50px;
+}
+
+a{
+	text-decoration: none;
+	color: #148dc3;
+	font-weight: bold;
+}
+
+a:hover{
+	color: #26aae5;
+}
+
+#signup{
+	text-align: center;
+}
+
+.errorLogin{
+  display: none;
+  color: red;
+}
+
+.hint{
+  font-size: 0.8em;
+  vertical-align: top;
+}
+
+#online{
+  background: #D9EDEA;
+  height: 60vh;
+  width: 15%;
+  overflow-y: scroll;
+  float: left;
+  border: 1px solid #888;
+}
+
+#chatbox{
+  background: #fff;
+  height: 60vh;
+  width: 80%;
+  overflow-y: scroll;
+  border: 1px solid #888;
+}
+
+#chat{
+  width: 80%;
+  height: 30px;
+}
+
+#container{
+  width: 70%;
+  margin-left: 17%;
+  margin-top: 5%;
+}
+
+#chatContainer{
+  width: 60%;
+  margin-left: 28%;
+  margin-top: 2%;
+}
+
+#img-upload{
+  width: 60%;
+  margin-left: 28%;
+  margin-top: 2%; 
+}
+
+#fileToUpload{
+  display: none;
+  cursor: pointer;
+}
+
+#img-upload img{
+  height: 35px;
+  cursor: pointer;
+}
+
+#upload{
+  margin-left: 10px;
+}
+
+.user{
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.onlineUser{
+  padding: 2px; 
+}
+
+.title{
+  font-weight: bold;
+  padding: 2px;
+  background: #148dc3;
+  color: #fff;
+}
+
+.error {
+  display: none;
+  color: red;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.logout{
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.welcome{
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#bar{
+  width: 100%;
+  height: 50px;
+  background: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+span.right{
+	float: right;
+}
+
+span.link > a {
+    background: #148dc3;
+    border-radius: 30px;
+    transition: 0.25s;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+span.right > a{
+    display: block;
+    margin-right: 5px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    transition: 0.25s;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+span.link > a:hover {
+  background-color: #26aae5;
+}
+
+span.right > a:hover {
+	color: #fff;
+  background-color: #148dc3;
+}
+
+span.header{
+  margin-left: 15px;
+}
+
+.droplink {
+    display: block;
+    background: #148dc3;
+    border: none;
+    transition: 0.25s;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.dropdown {
+    position: relative;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    font-size: 1em;
+    font-weight: normal;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+  background-color: #D5EDF2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #26aae5;
+}
